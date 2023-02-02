@@ -1,0 +1,10 @@
+[user]
+	name = Carlos Borroto
+	email = {{ .email | quote }}
+	signingkey = {{ onepasswordRead "op://Private/git-signing-key/public_key" }}
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
