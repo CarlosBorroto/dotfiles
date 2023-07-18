@@ -7,3 +7,13 @@ export PATH="${PATH}:${HOME}/Library/Application Support/JetBrains/Toolbox/scrip
 # Home bin
 export PATH="$HOME/.local/bin:${PATH}"
 
+load-tgswitch() {
+  local tgswitchtoml_path=".tgswitch.toml"
+
+  if [ -f "$tgswitchtoml_path" ]; then
+    tgswitch
+  fi
+}
+autoload -U add-zsh-hook
+add-zsh-hook chpwd load-tgswitch
+load-tgswitch
