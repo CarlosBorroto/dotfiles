@@ -1,0 +1,10 @@
+# initialize autocompletion
+autoload -Uz compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+
+# terraform completion
+[[ -f /opt/homebrew/bin/terraform ]] && compdef _c
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# kubectl completion
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)

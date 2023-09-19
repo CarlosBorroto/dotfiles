@@ -1,12 +1,12 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Home bin
+export PATH="$HOME/.local/bin:${PATH}"
 
 # Added by Toolbox App
 export PATH="${PATH}:${HOME}/Library/Application Support/JetBrains/Toolbox/scripts"
 
-# Home bin
-export PATH="$HOME/.local/bin:${PATH}"
-
+# Terragrunt switch
 load-tgswitch() {
   local tgswitchtoml_path=".tgswitch.toml"
 
