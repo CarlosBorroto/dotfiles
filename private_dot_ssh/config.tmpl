@@ -1,5 +1,9 @@
-Host *
-	User {{ .ssh_user | quote }}
-	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-	ForwardAgent yes
+Include /Users/cborroto/.colima/ssh_config
 
+Host *
+        User "cborroto900020"
+        IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+        ForwardAgent yes
+
+Host localhost
+        StrictHostKeyChecking no
