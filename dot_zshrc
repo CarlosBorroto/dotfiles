@@ -9,5 +9,8 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 # kubectl completion
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
+# helm completion
+[[ $commands[helm] ]] && source <(helm completion zsh)
+
 # starship prompt
 [[ -f /opt/homebrew/bin/starship ]] && eval "$(starship init zsh)"
