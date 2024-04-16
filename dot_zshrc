@@ -3,7 +3,7 @@ autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
 # terraform completion
-[[ -f /opt/homebrew/bin/terraform ]] && compdef _c
+[[ $commands[terraform] ]] && compdef _c
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # kubectl completion
@@ -13,4 +13,8 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 [[ $commands[helm] ]] && source <(helm completion zsh)
 
 # starship prompt
-[[ -f /opt/homebrew/bin/starship ]] && eval "$(starship init zsh)"
+[[ $commands[starship] ]] && eval "$(starship init zsh)"
+
+# oci completion
+OCI_AUTOCOMPLETE_PATH="$(brew --prefix oci-cli)/libexec/lib/python3.12/site-packages/oci_cli/bin/oci_autocomplete.sh"
+[[ -e "$OCI_AUTOCOMPLETE_PATH" ]] && source "$OCI_AUTOCOMPLETE_PATH"
