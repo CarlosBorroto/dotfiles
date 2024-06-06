@@ -1,0 +1,12 @@
+# Home bin
+export PATH="$HOME/.local/bin:${PATH}"
+
+# Added by Toolbox App
+export PATH="${PATH}:${HOME}/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# Tower CLI
+export TOWER_ACCESS_TOKEN={{ onepasswordRead "op://GeneDx/SeqeraDev/credential" }}
+export TOWER_API_ENDPOINT={{ onepasswordRead "op://GeneDx/SeqeraDev/hostname" }}
+export TOWER_WORKSPACE_ID={{ onepasswordRead "op://GeneDx/SeqeraDev/workspace id" }}
+
+alias assume=". assume"
