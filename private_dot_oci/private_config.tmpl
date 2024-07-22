@@ -1,6 +1,6 @@
 [DEFAULT]
 user={{ onepasswordRead "op://GeneDx/OCI/oci-user" }}
 fingerprint={{ onepasswordRead "op://GeneDx/OCI/oci-fingerprint" }}
-key_file=~/.oci/oci_api_key.pem
+key_file={{ .chezmoi.homeDir }}/.oci/oci_api_key.pem
 tenancy={{ onepasswordRead "op://GeneDx/OCI/oci-tenancy" }}
 region=us-ashburn-1
