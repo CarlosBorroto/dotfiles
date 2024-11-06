@@ -9,4 +9,9 @@ export TOWER_ACCESS_TOKEN={{ onepasswordRead "op://GeneDx/SeqeraDev/credential" 
 export TOWER_API_ENDPOINT={{ onepasswordRead "op://GeneDx/SeqeraDev/hostname" }}
 export TOWER_WORKSPACE_ID={{ onepasswordRead "op://GeneDx/SeqeraDev/workspace id" }}
 
+# OCI Container Registry
+export DOCKER_REGISTRY={{ onepasswordRead "op://GeneDx/OCIContainerRegistry/hostname" }}
+export DOCKER_USER='{{ onepasswordRead "op://GeneDx/OCIContainerRegistry/username" }}'
+export DOCKER_PASSWORD='{{ onepasswordRead "op://GeneDx/OCIContainerRegistry/credential" }}'
+
 alias assume=". assume"

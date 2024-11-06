@@ -4,6 +4,8 @@ Host *
         User "cborroto900020"
         IdentityAgent "{{ .chezmoi.homeDir }}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
         ForwardAgent yes
+        ServerAliveInterval 60
+        ServerAliveCountMax 120
 
 Host localhost
         StrictHostKeyChecking no
